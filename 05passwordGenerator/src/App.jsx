@@ -37,10 +37,17 @@ function App() {
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
+
   return (
+    <div
+    className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat" 
+    style={{
+      backgroundImage: `url('https://img.freepik.com/free-vector/abstract-secure-technology-background_23-2148331624.jpg?size=626&ext=jpg')`
+  }}> 
+   
     
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
-      <h1 className='text-white text-center my-3'>Password generator</h1>
+    <div className="w-full max-w-md shadow-md ms-96 rounded-lg px-4 py-3 bg-slate-500 bg-opacity-40 text-sky-400 mt-36 my-52 ">
+      <h1 className=' text-sky-400 text-center my-3 text-4xl align-middle font-serif py-4'>Password Generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
             type="text"
@@ -52,7 +59,7 @@ function App() {
         />
         <button
         onClick={copyPasswordToClipboard}
-        className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+        className='outline-none bg-blue-500 text-white px-3 py-0.5 shrink-0'
         >copy</button>
         
     </div>
@@ -68,7 +75,7 @@ function App() {
           />
           <label>Length: {length}</label>
       </div>
-      <div className="flex items-center gap-x-1">
+      <div className="flex items-center gap-x-1 px-4">
       <input
           type="checkbox"
           defaultChecked={numberAllowed}
@@ -91,6 +98,7 @@ function App() {
           <label htmlFor="characterInput">Characters</label>
       </div>
     </div>
+</div>
 </div>
     
   )

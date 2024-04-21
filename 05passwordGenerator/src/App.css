@@ -1,3 +1,7 @@
 button:hover {
-  background-color:darkred
+  background-color:rgb(25, 11, 186)
 }
+.cursor-pointer {
+  accent-color: rgb(13, 204, 242);
+}
+
