@@ -21,6 +21,9 @@ function App() {
     setAmount(convertedAmount)
   }
   
+  //final result (jo bhi amount h use keys jp currency info m h uske sath multiply aur jisme convert krna h (to) vli lelo)
+  //setConvertedAmount(amount * currencyInfo[to])
+  
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to])
   }
@@ -46,7 +49,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setFrom(currency)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />

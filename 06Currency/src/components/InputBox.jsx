@@ -39,6 +39,7 @@ function InputBox({
                 >
                     
                         {currencyOptions.map((currency) => (
+                            //remember the key if you want good performance of loops
                             <option key={currency} value={currency}>
                             {currency}
                             </option>
