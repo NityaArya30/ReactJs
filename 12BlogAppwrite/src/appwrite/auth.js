@@ -1,6 +1,6 @@
 //appwrite k har service k liye yhi same code likhna h bs isme aur kuch add kr skte ho
 
-import conf from '../conf.js'
+import conf from '../conf/conf.js'
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
@@ -54,7 +54,7 @@ async logout () {
     }
 }
 }
-const AuthService = new AuthService();
+const authService = new AuthService();
 
-export default AuthService;
+export default authService;
 
