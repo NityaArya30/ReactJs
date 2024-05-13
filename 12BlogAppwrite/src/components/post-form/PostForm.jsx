@@ -49,7 +49,6 @@ export default function PostForm({ post }) {
         }
     };
 
-    //slug is used to assign values
     const slugTransform = useCallback((value) => {
         if (value && typeof value === "string")
             return value
